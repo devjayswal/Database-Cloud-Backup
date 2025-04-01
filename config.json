@@ -4,14 +4,14 @@
         "driver": "mysql", 
         "name": "world",
         "user_name": "root", 
-        "password": "itshard@veryhard",
-        "host": "localhost:3306"
+        "password": "",
+        "host": ""
     },
     "service":
     {
         "driver": "mega", 
-        "user_name": "devjayswal404@gmail.com",
-        "password": "itshard@veryhard",
+        "user_name": "",
+        "password": "",
         "delete_files_older_than":1, 
         "folder_name": "backup", 
         "retries": 3
