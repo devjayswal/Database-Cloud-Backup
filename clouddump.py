@@ -5,6 +5,7 @@ import logging.handlers
 from tools import load_config, init_logger
 from factory import Factory
 from time import gmtime, strftime
+import traceback
 
 TMP_DIR = os.getcwd() + '/dumps/'
 
@@ -25,7 +26,9 @@ def main():
         os.remove(dumped_file)
         logger.info("%s removed from local system" % dumped_file)
         logger.info("Program terminated successfully")
-    except SystemExit:
+    except SystemExit as e:
+        print("SystemExit: %s" % e)
+        traceback.print_exc()
         logger.info("Program terminated with errors")
 
 if __name__ == "__main__":

@@ -58,7 +58,7 @@ class DriverMega(Service):
             past = datetime.datetime.now() - datetime.timedelta(
                 days = self.params["delete_files_older_than"])
             past_timestamp = calendar.timegm(past.utctimetuple())
-            for file_id, file_metadata in files.iteritems():
+            for file_id, file_metadata in files.items():
                 if file_metadata['ts'] < past_timestamp:
                     try:
                         self.mega.delete(file_id)
